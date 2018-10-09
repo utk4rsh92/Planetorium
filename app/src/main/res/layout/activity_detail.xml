@@ -6,17 +6,122 @@
     android:background="@drawable/background_main"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center|top"
+    android:gravity="top"
     tools:context=".DetailActivity">
+    <TextView
+        android:id="@+id/tv_planetoriumz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Planetorium"
+        android:layout_marginTop="5dp"
+        android:textColor="#c19f2e"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/imagelogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="left"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/earth"/>
 
     <TextView
         android:id="@+id/tv_Descript"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
         android:text="TextView"
         android:textColor="#fff"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="62dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_fact1"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_marginRight="10dp"
+            android:text="TextView" />
+    <TextView
+        android:id="@+id/tv_fact2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/tv_fact3"
+        android:layout_width="match_parent"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/tv_fact4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/tv_fact5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_fact6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_marginRight="10dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_fact7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:text="TextView" />
+
+    </LinearLayout>
 </LinearLayout>

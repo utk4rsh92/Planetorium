@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
     private void checkInternetConenction() {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         receiver = new NetworkChangeReceiver();
@@ -156,7 +157,8 @@ public class MainActivity extends AppCompatActivity
 
 
         private void jsonParse() {
-        String url = "https://api.myjson.com/bins/nfmxo";
+        //new api on 9 October 2018
+        String url = "https://api.myjson.com/bins/11p1yk";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -166,7 +168,9 @@ public class MainActivity extends AppCompatActivity
                             for (int i=0;i<jsonArray.length(); i++) {
 
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                Model modeldata = new Model(jsonObject.getString("name"), jsonObject.getString("details"), jsonObject.getString("description"), jsonObject.getString("imageurl"));
+                                Model modeldata = new Model(jsonObject.getString("name"), jsonObject.getString("details"), jsonObject.getString("description"),
+                                        jsonObject.getString("imageurl"),jsonObject.getString("fact1"),jsonObject.getString("fact2"),jsonObject.getString("fact3"),
+                                        jsonObject.getString("fact4"),jsonObject.getString("fact5"),jsonObject.getString("fact6"),jsonObject.getString("fact7"));
                                 modelList.add(modeldata);
                             }
                             progressDialog.dismiss();
