@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,10 @@
     android:orientation="vertical"
     android:gravity="top"
     tools:context=".DetailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/tv_planetoriumz"
         android:layout_width="match_parent"
@@ -50,6 +54,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/you_know"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:src="@drawable/funfact" />
         <TextView
             android:id="@+id/tv_fact1"
             android:layout_marginTop="20dp"
@@ -124,4 +137,5 @@
         android:text="TextView" />
 
     </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

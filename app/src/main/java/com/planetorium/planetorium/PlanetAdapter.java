@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -36,6 +37,16 @@ public PlanetAdapter(List<Model>modelList,Context context){
     public void onBindViewHolder(MyViewHolder holder, final int position) {
     holder.tvName.setText(modelList.get(position).getName());
     holder.tvDetails.setText(modelList.get(position).getDetails());
+    holder.btnShare.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT,modelList.get(position).getDescription());
+            //intent.putExtra(Intent.EXTRA_TEXT,modelList.get(position).getImageurl());
+            intent.setType("text/plain");
+            context.startActivity(Intent.createChooser(intent, "Send To"));
+        }
+    });
    holder.tvDescription.setText(modelList.get(position).getDescription());
         final String description = modelList.get(position).getDescription();
         final String img = modelList.get(position).getImageurl();
@@ -94,9 +105,11 @@ public PlanetAdapter(List<Model>modelList,Context context){
     TextView tvName, tvDetails, tvDescription;
     ImageView ivPlanets;
     LinearLayout linearLayout;
+    Button btnShare;
         public MyViewHolder(View itemView) {
             super(itemView);
             view  = itemView;
+            btnShare = (Button)itemView.findViewById(R.id.btnShare);
             linearLayout = (LinearLayout)itemView.findViewById(R.id.linear);
             tvName = (TextView)itemView.findViewById(R.id.tvTitle);
             tvDetails = (TextView)itemView.findViewById(R.id.tvdetails);
